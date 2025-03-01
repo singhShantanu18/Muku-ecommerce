@@ -1,0 +1,298 @@
+.muku-header {
+    background-color: #E1E1E1;
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 90px;
+}
+  
+.muku-header-left-section {
+    width: 180px;
+}
+  
+@media (max-width: 800px) {
+    .amazon-header-left-section {
+        width: unset;
+    }
+}
+  
+.header-link {
+    display: inline-block;
+    padding: 6px;
+    border-radius: 2px;
+    cursor: pointer;
+    text-decoration: none;
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+  
+.header-link:hover {
+    border: 1px solid white;
+}
+  
+.muku-logo {
+    width: 100px;
+    margin-top: 5px;
+}
+  
+.muku-mobile-logo {
+    display: none;
+}
+  
+@media (max-width: 575px) {
+    .muku-logo {
+      display: none;
+    }
+  
+    .muku-mobile-logo {
+      display: block;
+      height: 35px;
+      margin-top: 5px;
+    }
+}
+  
+.muku-header-middle-section {
+    flex: 1;
+    max-width: 850px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+}
+  
+.search-bar {
+    flex: 1;
+    width: 0;
+    font-size: 19px;
+    height: 44px;
+    padding-left: 20px;
+    border: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    font-family: rubik dirt;
+}
+  
+.search-button {
+    background-color: #ffffff;
+    border: none;
+    width: 45px;
+    height: 46px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    flex-shrink: 0;
+}
+  
+.search-icon {
+    height: 22px;
+    margin-left: 2px;
+    margin-top: 3px;
+}
+  
+.muku-header-right-section {
+    width: 180px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+}
+  
+  
+.orders-text {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+}
+  
+.cart-link {
+    color: white;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+  
+.carticon {
+    font-size: 40px;
+}
+  
+
+.cart-quantity {
+    color: #000;
+    font-size: 24px;
+    font-weight: 700;
+  
+    position: absolute;
+    top: -16px;
+    left: 16px;
+    
+    width: 26px;
+    text-align: center;
+}
+  
+
+
+.main {
+    margin-top: 60px;
+    background-color: #E1E1E1;
+  }
+  
+  .products-grid {
+    display: grid;
+  
+    /* - In CSS Grid, 1fr means a column will take up the
+         remaining space in the grid.
+       - If we write 1fr 1fr ... 1fr; 8 times, this will
+         divide the grid into 8 columns, each taking up an
+         equal amount of the space.
+       - repeat(8, 1fr); is a shortcut for repeating "1fr"
+         8 times (instead of typing out "1fr" 8 times).
+         repeat(...) is a special property that works with
+         display: grid; */
+    grid-template-columns: repeat(8, 1fr);
+  }
+  
+  /* @media is used to create responsive design (making the
+     website look good on any screen size). This @media
+     means when the screen width is 2000px or less, we
+     will divide the grid into 7 columns instead of 8. */
+  @media (max-width: 2000px) {
+    .products-grid {
+      grid-template-columns: repeat(7, 1fr);
+    }
+  }
+  
+  /* This @media means when the screen width is 1600px or
+     less, we will divide the grid into 6 columns. */
+  @media (max-width: 1600px) {
+    .products-grid {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+  
+  @media (max-width: 1300px) {
+    .products-grid {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+  
+  @media (max-width: 1000px) {
+    .products-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .products-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 575px) {
+    .products-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 450px) {
+    .products-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+.product-container {
+    padding-top: 40px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+  
+    border-right: 1px solid rgb(231, 231, 231);
+    border-bottom: 1px solid rgb(231, 231, 231);
+  
+    display: flex;
+    flex-direction: column;
+}
+  
+.product-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    height: 180px;
+    margin-bottom: 20px;
+}
+  
+.product-image {
+    /* Images will overflow their container by default. To
+      prevent this, we set max-width and max-height to 100%
+      so they stay inside their container. */
+    max-width: 100%;
+    max-height: 100%;
+}
+  
+.product-name {
+    height: 50px;
+    font-family: rubik dirt;
+    margin-bottom: 5px;
+}
+  
+  
+.product-price {
+    font-weight: 550;
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-family: rubik dirt;
+}
+  
+.product-quantity-container {
+    margin-bottom: 10px;
+}
+.quantitybox{
+    height: 30px;
+    width: 50px;
+    font-family: rubik dirt;
+}
+  
+.product-spacer {
+    flex: 1;
+}
+  
+.added-to-cart {
+    color: rgb(6, 125, 98);
+    font-size: 16px;
+  
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  
+    /* At first, the "Added to cart" message will
+       be invisible. Use JavaScript to change the
+       opacity and make it visible. */
+    opacity: 0;
+}
+  
+.added-to-cart img {
+    height: 20px;
+    margin-right: 5px;
+}
+  
+.add-to-cart-button {
+    width: 100%;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    font-family: kodchasan;
+    border: none;
+    font-size: 18px;
+}
+  
+.add-to-cart-button:hover{
+    cursor: pointer;
+}
